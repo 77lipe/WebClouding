@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: url('./img/fundo-figma.png') no-repeat center center/cover;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login {
+    color: #BCB1B1;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.card {
+    background: rgba(8, 58, 105, 0.5);
+    width: 320px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.form-container {
+    width: 100%;
+}
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.input-box input {
+    width: 100%;
+    padding: 12px 40px 12px 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(9, 45, 79, 0.9);
+    outline: none;
+    color: white;
+}
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+.btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+.btn:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+.switch-page {
+    margin-top: 10px;
+    font-size: 14px;
+    color: gray;
+}
+.switch-page a {
+    text-decoration: none;
+    color: white;
+}
