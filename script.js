@@ -1,32 +1,42 @@
 'use strict'
-function login(){
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    if(username && password){
-        alert('Login realizado com sucesso')
-    }else{
-        alert('Preencha todos os campos!!')
-    }
-}
 
-document.getElementById("registerForm").addEventListener("submit", function(event) {
+
+
+document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
-    let username = document.querySelector("input[placeholder='Usuário']");
-    let email = document.querySelector("input[placeholder='Email']");
-    let password = document.querySelector("input[placeholder='Senha']");
-    let keyword = document.querySelector("input[placeholder='Palavra-Chave']");
+    let email = document.querySelector("input[placeholder='Email']").value;
+    let senha = document.querySelector("input[placeholder='Senha']").value;    
 
-    if (!username || !email || !password || !keyword) {
-        alert("Preencha todos os campos!");
-        return;
+    const url = "https://back-spider.vercel.app/login"
+        
+    const login = {
+        email,
+        senha
     }
-    alert("Registro realizado com sucesso!");
-    window.location.href = "login.html"; // Redireciona para o login
+
+
+    const options = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },     
+        body: JSON.stringify(login)
+    }
+
+
+    const responseUser = await fetch(url, options) 
+
+    console.log(responseUser);
+    
+
+
+    if(responseUser.status == 200){
+        alert('Login realizado com sucesso!')
+    }
+
 
 });
 
-const data = {
-    email: email,
-    senha: password
-}
+
+
