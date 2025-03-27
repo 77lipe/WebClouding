@@ -55,6 +55,26 @@ h2 {
     transform: translateY(-50%);
     color: white;
 }
+
+
+.checkbox{
+    width: 20px;
+    height: 20px;
+    accent-color: rgba(9, 45, 79, 0.9); /* Cor do checkbox */
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    gap: 10px;
+  }
+
+#premium {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
 .btn {
     width: 100%;
     margin-top: 10px;

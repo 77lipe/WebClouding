@@ -10,15 +10,20 @@
         <div class="form-container">
             <h2>Registro</h2>
             <form id="registerForm">
-                <div class="input-box"><input type="text" placeholder="Usuário" required></div>
-                <div class="input-box"><input type="email" placeholder="Email" required></div>
-                <div class="input-box"><input type="password" placeholder="Senha" required></div>
-                <div class="input-box"><input type="text" placeholder="Palavra-Chave" required></div>
-                <button class="btn" type="submit">Registrar</button>
+                <div class="input-box"><input type="text" placeholder="Usuário" id="nome" required></div>
+                <div class="input-box"><input type="email" placeholder="Email"  id="email" required></div>
+                <div class="input-box"><input type="password" placeholder="Senha"  id="senha" required></div>
+                <div class="input-box"><input type="text" placeholder="Palavra-Chave"  id="palavra" required></div>
+                <div class="input-box"><input type="url" placeholder="imagem de perfil"  id="img" required></div>       
+                <div class="checkbox"><input type="checkbox" name="termos" value="aceito"  id="check" required>
+                    <p id="premium">conta premium?</p></div>
+
+
+                <button class="btn" type="submit" >Registrar</button>
             </form>
             <p class="switch-page"><a href="login.html">Já tem uma conta? Faça login</a></p>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="register.js"></script>
 </body>
 </html>
