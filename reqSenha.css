@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: url('./img/fundo-figma.png') no-repeat center center/cover;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Expande conforme necessário */
+}
+
+.container {
+    background: rgba(8, 58, 105, 0.5);
+    width: 30%;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin-top: 32px;
+    
+    
+}
+.form-container {
+    width: 100%;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.input-box {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.input-box input {
+    width: 85%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(9, 45, 79, 0.7);
+    outline: none;
+    color: white;
+}
+
+#botao{
+    width: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+
+
+p {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #333;
+}
+
+.mensagem {
+    margin-top: 10px;
+    font-size: 14px;
+    display: none;
+}
+
+.mensagem.sucesso {
+    color: green;
+}
+
+.mensagem.erro {
+    color: red;
+}
+.icon {
+    width: 200px; /* Ajuste o tamanho da imagem */
+    margin: 0 auto 15px;
+}
+.switch-page a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+#registro{
+    margin-top: 16px;
+    color: white;
+    font-weight: bold;
+}

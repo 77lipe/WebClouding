@@ -5,8 +5,8 @@
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
-    let email = document.querySelector("input[placeholder='Email']").value;
-    let senha = document.querySelector("input[placeholder='Senha']").value;    
+    let email = document.getElementById("email").value;
+    let senha = document.getElementById("senha").value;    
 
     const url = "https://back-spider.vercel.app/login"
         
@@ -31,9 +31,13 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     
 
 
-    if(responseUser.status == 200){
-        alert('Login realizado com sucesso!')
-    }
+        if (responseUser.status === 200) {
+            window.location.href = "perfil.html";
+            alert('Login realizado com sucesso!')
+        } else {
+            alert('Erro ao encontrar email ou palavra-chave.');
+        }
+    
 
 
 });
