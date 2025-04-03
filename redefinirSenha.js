@@ -38,9 +38,9 @@ document.getElementById("formRedefinirSenha").addEventListener("submit", async f
 
         if (responseUser.status === 200) {
             window.location.href = "login.html";
-            alert('Verificação realizada com sucesso!');
+            alert('Senha redefinida com sucesso!');
         } else {
-            alert('Erro ao encontrar email ou palavra-chave.');
+            alert('Erro ao inserir uma nova senha');
         }
         }
             
