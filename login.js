@@ -8,6 +8,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     let email = document.getElementById("email").value;
     let senha = document.getElementById("senha").value;    
 
+
     const url = "https://back-spider.vercel.app/login"
         
     const login = {
@@ -24,11 +25,19 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         body: JSON.stringify(login)
     }
 
-
-    const responseUser = await fetch(url, options) 
-
-    console.log(responseUser);
     
+
+
+    try {
+        const responseUser = await fetch(url, options) 
+        const data = await responseUser.json()
+
+
+        const idPerfil = data.user.id
+        console.log(idPerfil)
+
+    
+        localStorage.setItem("idPerfil", idPerfil);
 
 
         if (responseUser.status === 200) {
@@ -37,6 +46,12 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         } else {
             alert('Erro ao encontrar email ou palavra-chave.');
         }
+
+    } catch (error) {
+        console.error("Erro ao conectar à API:", error);
+        alert('Erro de conexão com o servidor.');
+    }
+    
     
 
 
