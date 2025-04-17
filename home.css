@@ -1,0 +1,129 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background: url('./img/fundo-figma.png') no-repeat center center/cover;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  header {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 0;
+    font-weight: bold;
+  }
+  .top-nav {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    padding-right: 60px;
+    padding-top: 50px;
+  }
+  
+  .top-nav div {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .search-box {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    margin-bottom: 1rem;
+  }
+  
+  .search-box input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(9, 45, 79, 0.9);
+    color: white;
+    width: 250px;
+  }
+  
+  .search-box input::placeholder {
+    color: #ccc;
+  }
+  
+  .feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .card, .post-form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 50%;
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    object-fit: cover;
+  }
+  
+  .content {
+    margin-top: 0.5rem;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+  }
+  
+  .post-form textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    resize: none;
+    margin-top: 0.5rem;
+  }
+  
+  .post-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .post-form button {
+    margin-left: auto;
+    background: #0a2848;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .post-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+  }

@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
 body {
     font-family: Arial, sans-serif;
     background: url('./img/fundo-figma.png') no-repeat center center/cover;
     color: white;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* No mínimo a altura da tela */
+    min-height: 100vh;
+    /* No mínimo a altura da tela */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -18,7 +22,8 @@ body {
     border-radius: 15px;
     margin-top: 24px;
     margin-bottom: 18px;
-    min-height: 100vh; /* Expande conforme necessário */
+    min-height: 100vh;
+    /* Expande conforme necessário */
 }
 
 header {
@@ -37,10 +42,29 @@ header {
     border-radius: 5px;
 }
 
-nav a {
+.nav a {
+    align-items: center;
+}
+
+.home-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 15px;
     color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: center;
+
+}
+
+#logout {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
-    font-size: 18px;
+    margin-top: 15px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
 }
 
 .profile {
@@ -54,14 +78,20 @@ nav a {
 .avatar {
     width: 120px;
     height: 120px;
-    border-radius: 30px;
+    border-radius: 30%;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.4);
 }
 
 .info {
     margin-left: 15px;
+    justify-items: center;
 }
 
-h2, h3 {
+h2,
+h3 {
     margin: 5px 0;
 }
 
@@ -88,4 +118,22 @@ h2, h3 {
     height: 100px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+}
+
+#nomePerfil {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background: linear-gradient(90deg, #ffffff, #ffffff, #e0e0e0);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: brilho 4s ease-in-out infinite;
+
+}
+
+h2{
+    margin: 5px 0;
+    letter-spacing: 0.4px;
+    font-weight: bold;
+    font-size: 29px;
 }

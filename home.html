@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
+</head>
+<body>
+  <header>For you</header>
+
+  <div class="top-nav">
+    <div><img src="img/home.png" alt="home"> Home</div>
+    <div><img src="img/perfil.png" alt="perfil"> Perfil</div>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="search" />
+  </div>
+
+  <div class="feed">
+    <div class="card">
+      <div class="user">
+        <img id="img" src="img/cocielo.png" alt="avatar" />
+        <div>
+          <strong>Julio Cocielo</strong>
+          <div class="content" id="post1">Fds onde?</div>
+        </div>
+      </div>
+      <div class="actions">
+        <span>💬</span>
+        <span>❤️</span>
+        <span>📨</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="user">
+        <img src="img/ruyter.png" alt="avatar" />
+        <strong>Ruyter</strong>
+      </div>
+      <img src="img/ferrari.png" alt="carro" class="post-image" id="car-image" />
+    </div>
+
+    <div class="post-form">
+      <div class="user">
+        <img src="https://via.placeholder.com/50" alt="avatar" />
+        <textarea rows="2" id="thought"></textarea>
+      </div>
+      <div class="post-options">
+        <span>🎬</span>
+        <span>GIF</span>
+        <button id="post-button">Postar</button>
+      </div>
+    </div>
+  </div>

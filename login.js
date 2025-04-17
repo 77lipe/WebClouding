@@ -41,16 +41,35 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
 
 
         if (responseUser.status === 200) {
-            window.location.href = "perfil.html";
-            alert('Login realizado com sucesso!')
-        } else {
-            alert('Erro ao encontrar email ou palavra-chave.');
-        }
+    Toastify({
+        text: "Login realizado com sucesso!",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#4CAF50"
+    }).showToast();
 
-    } catch (error) {
-        console.error("Erro ao conectar à API:", error);
-        alert('Erro de conexão com o servidor.');
-    }
+    window.location.href = "perfil.html";
+} else {
+    Toastify({
+        text: "Erro ao encontrar email ou palavra-chave.",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#FF6347"
+    }).showToast();
+}
+
+} catch (error) {
+    console.error("Erro ao conectar à API:", error);
+    Toastify({
+        text: "Erro de conexão com o servidor.",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#FF6347"
+    }).showToast();
+}
     
     
 
