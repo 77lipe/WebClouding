@@ -69,56 +69,7 @@ async function getPublicacoes() {
 
 getPublicacoes()
 
-// Evento para o formulário de nova publicação
-form.addEventListener('submit', event => {
-    event.preventDefault();
 
-    const descricao = document.getElementById('descricao').value.trim();
-    const local = document.getElementById('local').value.trim();
-    const imagem = document.getElementById('imagem').value.trim();
-    const dataPublicacao = new Date().toLocaleDateString('pt-BR'); // Data atual no formato dd/mm/yyyy
-    const idUsuario = 2; // Exemplo de idUsuario, pode ser dinâmico conforme sua lógica
-
-    // Validação dos campos obrigatórios
-    if (!descricao || !local || !imagem || !dataPublicacao || !idUsuario) {
-        alert('Por favor, preencha todos os campos!');
-        return;
-    }
-
-    const novaPublicacao = {
-        descricao,
-        local,
-        imagem,
-        dataPublicacao,
-        idUsuario // Corrigido para o nome correto do campo
-    };
-
-    // Depuração: mostra no console o que será enviado
-    console.log('Enviando publicação:', novaPublicacao);
-
-    fetch('https://back-spider.vercel.app/publicacoes/cadastrarPublicacao', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(novaPublicacao)
-    })
-        .then(async response => {
-            if (!response.ok) {
-                const erroDetalhado = await response.json();
-                console.error('Erro detalhado do servidor:', erroDetalhado);
-                throw new Error('Erro ao cadastrar publicação');
-            }
-            return response.json();
-        })
-        .then(() => {
-            alert('Publicação cadastrada com sucesso!');
-            form.reset();
-            carregarPublicacoes();
-        })
-        .catch(error => {
-            console.error('Erro ao cadastrar publicação:', error);
-        });
-});
-
-
+function irParaPublicar() {
+    window.location.href = "publicar.html"; // substitua pelo link desejado
+  }
